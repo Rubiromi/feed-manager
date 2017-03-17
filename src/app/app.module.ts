@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { Router } from '@angular/router';
 
-import { FeedManegerRoutingModule }     from './app-routing.module';
+import { FeedManagerRoutingModule }     from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -42,7 +42,7 @@ import { FeedEditComponent } from './feed-edit/feed-edit.component';
     BrowserModule,
     FormsModule,
     HttpModule,
-    FeedManegerRoutingModule
+    FeedManagerRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
