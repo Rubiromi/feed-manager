@@ -1,0 +1,86 @@
+<ul class="nav nav-tabs">
+  <li role="presentation"><a href="#">Management</a></li>
+  <li role="presentation"><a href="monitoring">Monitoring</a></li>
+  <li role="presentation"><a href="history">History</a></li>
+  <li role="presentation" class="active"><a href="feeds/:id/edit">Edit Feed</a></li>
+</ul>
+
+<div class="row">
+	<ul class="nav nav-pills col-md-9 col-md-offset-3">
+		<li role="presentation" class="active"><a routerLink="/feeds/:id/new">General</a></li>
+	  <li role="presentation"><a href="loading-parameters">Loading Parameters</a></li>
+	  <li role="presentation"><a href="rewriting-parameters">Rewriting Parameters</a></li>
+	  <li role="presentation"><a href="advanced-parameters">Advanced Parameters</a></li>
+	  <li role="presentation"><a href="loading-results">Loading results</a></li>
+	  <li role="presentation"><a href="products">Products</a></li>
+	  <li role="presentation"><a href="feed-history">History</a></li>
+	</ul>
+</div>
+
+<div class="container">	
+	<form class="form">
+		<div class="row">
+		 	<h2>Edit Feed</h2>
+
+		  <div class="form-group col-md-7">
+		    <label for="inputFeedName">Feed Name</label>
+		    <input type="feed-name" class="form-control" id="inputFeedName" placeholder="Feed Name">
+		  </div>
+		  <div class="form-group col-md-7">
+		    <label for="inputType">Type</label>
+		  	<div class="content">
+		  		<select name="feed" id="feed-type">
+		  			<option value="XmlInstallment">XmlInstallment</option>
+						<option value="Custom Associations">Custom Associations</option>
+						<option value="Csv" selected="selected">Csv</option>
+						<option value="Custom">Custom</option>
+						<option value="Xml">Xml</option>
+						<option value="XmlNoPrice">XmlNoPrice</option>
+						<option value="CsvNoPrice">CsvNoPrice</option>
+						<option value="XmlPreProcess">XmlPreProcess</option>
+						<option value="XmlRich">XmlRich</option>
+						<option value="CsvPriority">CsvPriority</option>
+						<option value="XmlImageProxy">XmlImageProxy</option>
+						<option value="XmlPriority">XmlPriority</option>
+						<option value="DynamicXml">DynamicXml</option>
+						<option value="CustomImageProxy">CustomImageProxy</option>
+						<option value="DynamicCsv">DynamicCsv</option>
+						<option value="DataCollect">DataCollect</option>
+						<option value="CsvUnitPrice">CsvUnitPrice</option>
+						<option value="XmlStock">XmlStock</option>
+						<option value="CsvStock">CsvStock</option>
+						<option value="XmlInstallmentStock">XmlInstallmentStock</option>
+						<option value="XmlBazaarvoice">XmlBazaarvoice</option>
+						<option value="CsvBazaarvoice">CsvBazaarvoice</option>
+						<option value="XmlStars">XmlStars</option>
+						<option value="CsvStars">CsvStars</option>
+						<option value="XmlIncremental">XmlIncremental</option>
+						<option value="CustomIncremental">CustomIncremental</option>
+						<option value="XmlInstallmentIncremental">XmlInstallmentIncremental</option>
+						<option value="CsvStockNoprice">CsvStockNoprice</option>
+						<option value="XmlStockNoprice">XmlStockNoprice</option>
+		  		</select>
+		  	</div>
+		  </div>
+		  <div class="form-group col-md-7">
+		    <label for="selection">Selection</label>
+		  	<div class="content">
+		  		<select name="selection" id="selection">
+		  			<option value="1" selected="selected">default</option>
+						<option value="2">geo</option>
+						<option value="4">catp_max1_cat_max0</option>
+						<option value="5">catp_max1_cat_max1</option>
+						<option value="6">top_products_only</option>
+						<option value="7">fp_prio_1</option>
+						<option value="8">fp_prio_2</option>
+						<option value="9">fp_prio_3</option>
+		  		</select>
+		  	</div>
+		  </div>
+		  <div class="form-group col-md-7 submit">
+		  	<button type="submit" class="btn btn-primary">Submit</button>
+		  	<button type="submit" class="btn btn-default">Cancel</button>
+		  </div>
+		</div>  <!-- End of row -->
+	</form>
+</div>

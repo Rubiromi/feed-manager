@@ -1,0 +1,24 @@
+.btn-group-sm>.btn, .btn-sm {
+	margin-top: 7px;
+	text-align: right;
+}
+
+.filter {
+	text-align: right;
+}
+
+nav {
+  text-align: center;
+}
+
+table {
+	margin-top: 10px;
+}
+
+th {
+	margin-top: 15px;
+}
+
+tr:nth-child(even) {
+    background-color: #f8f8f8;
+}

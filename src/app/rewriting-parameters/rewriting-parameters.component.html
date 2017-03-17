@@ -1,0 +1,152 @@
+<ul class="nav nav-tabs">
+  <li role="presentation"><a href="#">Management</a></li>
+  <li role="presentation"><a href="monitoring">Monitoring</a></li>
+  <li role="presentation"><a href="history">History</a></li>
+  <li role="presentation" class="active"><a href="feeds/:id/new">Edit Feed</a></li>
+</ul>
+
+<div class="row">
+	<ul class="nav nav-pills col-md-9 col-md-offset-3">
+		<li role="presentation"><a routerLink="/feeds/:id/new">General</a></li>
+	  <li role="presentation"><a href="loading-parameters">Loading Parameters</a></li>
+	  <li role="presentation" class="active"><a href="rewriting-parameters">Rewriting Parameters</a></li>
+	  <li role="presentation"><a href="advanced-parameters">Advanced Parameters</a></li>
+	  <li role="presentation"><a href="loading-results">Loading results</a></li>
+	  <li role="presentation"><a href="products">Products</a></li>
+	  <li role="presentation"><a href="feed-history">Feed History</a></li>
+	</ul>
+</div>
+
+<div class="container">
+	<table>
+		<tbody>
+		  <tr>
+		    <th>product.id</th>
+		    <td>Product Identifier</td>
+		  </tr>
+		  <tr>
+		    <th>product.description</th>
+		    <td>Description</td>
+		  </tr>
+		  <tr>
+		    <th>product.price</th>
+		    <td>Price</td>
+		  </tr>
+		  <tr>
+		    <th>product.price_old</th>
+		    <td>Striped Price</td>
+		  </tr>
+		  <tr>
+		    <th>product.category</th>
+		    <td>Category</td>
+		  </tr>
+		  <tr>
+		    <th>product.url_product</th>
+		    <td>Product URL</td>
+		  </tr>
+		  <tr>
+		    <th>product.url_image</th>
+		    <td>Picture URL</td>
+		  </tr>
+		  <tr>
+		    <th>product.url_imagebig</th>
+		    <td>Picture URL (Large)</td>
+		  </tr>
+		  <tr>
+		    <th>product.currency</th>
+		    <td>Currency</td>
+		  </tr>
+		</tbody>
+  </table>
+
+	<form class="form-horizontal">
+
+		<div class="form-group">
+			<label for="inputProductId" class="col-md-2">ID rewriting</label>
+			<div class="col-md-6">
+		    <input type="productid" class="form-control" id="inputProductId" placeholder="ID">
+		  </div>
+		  <div class="col-md-4">
+		    Rewrite Id with macro
+		  </div>
+		</div>
+
+		<div class="form-group">
+			<label for="inputProductTitle" class="col-md-2">Title rewriting</label>
+			<div class="col-md-6">
+		    <input type="producttitle" class="form-control" id="inputProductTitle" placeholder="Title">
+		  </div>
+		  <div class="col-md-4">
+		    Rewrite URL with macro
+		  </div>
+		</div>
+
+		<div class="form-group">
+			<label for="inputProductDescription" class="col-md-2">Description rewriting</label>
+			<div class="col-md-6">
+		    <input type="productdescription" class="form-control" id="inputProductDescription" placeholder="Description">
+		  </div>
+		  <div class="col-md-4">
+		    Rewrite Description with macro
+		  </div>
+		</div>
+
+		<div class="form-group">
+			<label for="inputProductUrl" class="col-md-2">Product URL rewriting</label>
+			<div class="col-md-6">
+		    <input type="producturl" class="form-control" id="inputProductUrl" placeholder="Product URL">
+		  </div>
+		  <div class="col-md-4">
+		    Rewrite Product URL with macro
+		  </div>
+		</div>
+
+		<div class="form-group">
+			<label for="inputProductImage" class="col-md-2">Image URL rewriting</label>
+			<div class="col-md-6">
+		    <input type="productimage" class="form-control" id="inputProductImage" placeholder="Image URL">
+		  </div>
+		  <div class="col-md-4">
+		    Rewrite Image URL with macro
+		  </div>
+		</div>
+
+		<div class="form-group">
+			<label for="inputProductCategory" class="col-md-2">Category rewriting</label>
+			<div class="col-md-6">
+		    <input type="productcategory" class="form-control" id="inputProductCategory" placeholder="Category">
+		  </div>
+		  <div class="col-md-4">
+		    Rewrite Product Category with macro
+		  </div>
+		</div>
+
+		<div class="form-group">
+		  <label for="imageRedirect" class="col-md-2">Image Redirect</label>
+	  	<div class="content col-md-10">
+	  		<select name="imageredirect" id="imageRedirect">
+	  			<option value="1" selected="selected">false</option>
+					<option value="2">true</option>
+	  		</select>
+	  		Force loading image from client's website
+	  	</div>
+	  </div>
+
+	  <div class="form-group submit">
+	  	<div class="col-md-3 col-md-offset-9">
+		  	<button type="submit" class="btn btn-primary">Save</button>
+		  	<button type="submit" class="btn btn-default">Cancel</button>
+		  </div>
+	  </div>
+
+
+
+
+	</form>
+</div>
+
+
+
+		  
+
+		 

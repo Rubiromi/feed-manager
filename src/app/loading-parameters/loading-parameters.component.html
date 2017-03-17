@@ -1,0 +1,178 @@
+<ul class="nav nav-tabs">
+  <li role="presentation"><a href="#">Management</a></li>
+  <li role="presentation"><a href="monitoring">Monitoring</a></li>
+  <li role="presentation"><a href="history">History</a></li>
+  <li role="presentation" class="active"><a href="feeds/:id/new">Edit Feed</a></li>
+</ul>
+
+<div class="row">
+	<ul class="nav nav-pills col-md-9 col-md-offset-3">
+		<li role="presentation"><a routerLink="/feeds/:id/new">General</a></li>
+	  <li role="presentation" class="active"><a href="loading-parameters">Loading Parameters</a></li>
+	  <li role="presentation"><a href="rewriting-parameters">Rewriting Parameters</a></li>
+	  <li role="presentation"><a href="advanced-parameters">Advanced Parameters</a></li>
+	  <li role="presentation"><a href="loading-results">Loading results</a></li>
+	  <li role="presentation"><a href="products">Products</a></li>
+	  <li role="presentation"><a href="feed-history">Feed History</a></li>
+	</ul>
+</div>
+
+<div class="container">
+	<form class="form-horizontal">
+
+		<div class="form-group">
+			<label for="inputFeedUrl" class="col-md-2">Feed Url</label>
+			<div class="col-md-10">
+		    <input type="feed-url" class="form-control" id="inputFeedUrl" placeholder="Feed URL">
+		  </div>
+		</div>
+
+		<div class="form-group">
+			<label for="inputLogin" class="col-md-2">Login</label>
+			<div class="col-md-6">
+		    <input type="login" class="form-control" id="inputLogin" placeholder="Feed user login to download">
+		  </div>
+		</div>
+
+		<div class="form-group">
+			<label for="inputPassword" class="col-md-2">Password</label>
+			<div class="col-md-6">
+		    <input type="password" class="form-control" id="inputPassword" placeholder="Feed user password to download">
+		  </div>
+		</div>
+
+		<div class="form-group">
+		  <label for="zipfile" class="col-md-2">Zip file</label>
+	  	<div class="content col-md-10">
+	  		<select name="zipfile" id="zipfile">
+	  			<option value="1" selected="selected">zg</option>
+					<option value="2">zip</option>
+					<option value="3">bz2</option>
+	  		</select>
+	  	</div>
+	  </div>
+
+	  <div class="form-group">
+			<label for="inputIdField" class="col-md-2">ID field</label>
+			<div class="col-md-6">
+		    <input type="idfield" class="form-control" id="inputIdField" placeholder="ID field">
+		  </div>
+		</div>
+
+		<div class="form-group">
+			<label for="inputTitleField" class="col-md-2">Title field</label>
+			<div class="col-md-6">
+		    <input type="titlefield" class="form-control" id="inputTitleField" placeholder="Title field">
+		  </div>
+		</div>
+
+		<div class="form-group">
+			<label for="inputDescriptionField" class="col-md-2">Description field</label>
+			<div class="col-md-6">
+		    <input type="descriptionfield" class="form-control" id="inputDescriptionField" placeholder="Description field">
+		  </div>
+		</div>
+
+		<div class="form-group">
+			<label for="inputPriceField" class="col-md-2">Price field</label>
+			<div class="col-md-6">
+		    <input type="pricefield" class="form-control" id="inputPriceField" placeholder="Price field">
+		  </div>
+		</div>
+
+		<div class="form-group">
+			<label for="inputDiscountedPriceField" class="col-md-2">Discounted price field</label>
+			<div class="col-md-6">
+		    <input type="discountedpricefield" class="form-control" id="inputDiscountedPriceField" placeholder="Discounted price field">
+		  </div>
+		</div>
+
+		<div class="form-group">
+		  <label for="priceformat" class="col-md-2">Price format</label>
+	  	<div class="content col-md-10">
+	  		<select name="priceformat" id="priceformat">
+	  			<option value="1" selected="selected">en 1,000.00</option>
+					<option value="2">fr 1 000,00</option>
+					<option value="3">pt 1.000,00</option>
+	  		</select>
+	  		Price format language
+	  	</div>
+	  </div>
+
+	  <div class="form-group">
+			<label for="inputProductUrlField" class="col-md-2">Product URL field</label>
+			<div class="col-md-10">
+		    <input type="producturlfield" class="form-control" id="inputProductUrlField" placeholder="Product URL field">
+		  </div>
+		</div>
+
+		<div class="form-group">
+			<label for="inputImageUrlField" class="col-md-2">Image URL field</label>
+			<div class="col-md-10">
+		    <input type="imageurlfield" class="form-control" id="inputImageUrlField" placeholder="Image URL field">
+		  </div>
+		</div>
+
+		<div class="form-group">
+			<label for="inputCurrency" class="col-md-2">Currency</label>
+			<div class="col-md-6">
+		    <input type="currency" class="form-control" id="inputCurrency" placeholder="Currency code">
+		  </div>
+		</div>
+
+		<div class="form-group">
+			<label for="inputCategory" class="col-md-2">Category field</label>
+			<div class="col-md-6">
+		    <input type="category" class="form-control" id="inputCategory" placeholder="Category field">
+		  </div>
+		</div>
+
+		<div class="form-group">
+			<label for="inputEncoding" class="col-md-2">Encoding</label>
+			<div class="col-md-6">
+		    <input type="encoding" class="form-control" id="inputEncoding" placeholder="Encoding">
+		  </div>
+		</div>
+
+		<div class="form-group">
+			<label for="inputProductMarkup" class="col-md-2">Product markup</label>
+			<div class="col-md-6">
+		    <input type="productmarkup" class="form-control" id="inputProductMarkup" placeholder="Product markup">
+		  </div>
+		</div>
+
+		<div class="form-group">
+			<label for="inputSensitiveCategories" class="col-md-2">Sensitive categories</label>
+			<div class="col-md-6">
+		    <input type="sensitivecategories" class="form-control" id="inputSensitiveCategories">
+		  </div>
+		  <div class="col-md-4">
+		  	<h6>To exclude from top products associations, split with semicolons (;), use category labels after rewriting</h6>
+		  </div>
+		</div>
+
+		<div class="form-group">
+			<label for="inputNonSensitiveCategories" class="col-md-2">NON sensitive categories</label>
+			<div class="col-md-6">
+		    <input type="nonsensitivecategories" class="form-control" id="inputNonSensitiveCategories">
+		  </div>
+		  <div class="col-md-4">
+		  	<h6>Overwrites the behavior of sensitive categories</h6>
+		  </div>
+		</div>
+
+	  <div class="form-group submit">
+	  	<div class="col-md-3 col-md-offset-9">
+		  	<button type="submit" class="btn btn-primary">Save</button>
+		  	<button type="submit" class="btn btn-default">Cancel</button>
+		  </div>
+	  </div>
+
+	</form>
+</div>
+
+
+
+		  
+
+		 

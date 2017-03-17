@@ -1,0 +1,115 @@
+<ul class="nav nav-tabs">
+  <li role="presentation"><a href="#">Management</a></li>
+  <li role="presentation"><a href="monitoring">Monitoring</a></li>
+  <li role="presentation"><a href="history">History</a></li>
+  <li role="presentation" class="active"><a href="feeds/:id/new">Edit Feed</a></li>
+</ul>
+
+<div class="row">
+	<ul class="nav nav-pills col-md-9 col-md-offset-3">
+		<li role="presentation"><a routerLink="/feeds/:id/new">General</a></li>
+	  <li role="presentation"><a href="loading-parameters">Loading Parameters</a></li>
+	  <li role="presentation"><a href="rewriting-parameters">Rewriting Parameters</a></li>
+	  <li role="presentation" class="active"><a href="advanced-parameters">Advanced Parameters</a></li>
+	  <li role="presentation"><a href="loading-results">Loading results</a></li>
+	  <li role="presentation"><a href="products">Products</a></li>
+	  <li role="presentation"><a href="feed-history">Feed History</a></li>
+	</ul>
+</div>
+
+<div class="container col-md-8">
+	<form class="form-horizontal">
+
+		<div class="form-group">
+		  <label for="resetupdated" class="col-md-3">Step reset updated</label>
+	  	<div class="content col-md-9">
+	  		<select name="resetupdated" id="resetupdated">
+	  			<option value="1" selected="selected">Yes</option>
+					<option value="2">No</option>
+	  		</select>
+	  		Reset flag for updated feed
+	  	</div>
+	  </div>	
+
+	  <div class="form-group">
+		  <label for="disablenonupdated" class="col-md-3">Step disable non updated</label>
+	  	<div class="content col-md-9">
+	  		<select name="disablenonupdated" id="disablenonupdated">
+	  			<option value="1" selected="selected">Yes</option>
+					<option value="2">No</option>
+	  		</select>
+	  		Deleted by updated flag
+	  	</div>
+	  </div>	
+
+	  <div class="form-group">
+		  <label for="biddingstep" class="col-md-3">Bidding step</label>
+	  	<div class="content col-md-9">
+	  		<select name="biddingstep" id="biddingstep">
+	  			<option value="1" selected="selected">Yes</option>
+					<option value="2">No</option>
+	  		</select>
+	  		Category bidding set-up
+	  	</div>
+	  </div>	
+
+	  <div class="form-group">
+		  <label for="qualitystep" class="col-md-3">Quality step</label>
+	  	<div class="content col-md-9">
+	  		<select name="qualitystep" id="qualitystep">
+	  			<option value="1" selected="selected">Yes</option>
+					<option value="2">No</option>
+	  		</select>
+	  		Feed quality KPI
+	  	</div>
+	  </div>	
+
+	  <div class="form-group">
+		  <label for="certifcheck" class="col-md-3">Certif check</label>
+	  	<div class="content col-md-9">
+	  		<select name="certifcheck" id="certifcheck">
+	  			<option value="1" selected="selected">Yes</option>
+					<option value="2">No</option>
+	  		</select>
+	  		Https certificate check
+	  	</div>
+	  </div>	
+
+	  <div class="form-group">
+		  <label for="imagecheck" class="col-md-3">Images check</label>
+	  	<div class="content col-md-9">
+	  		<select name="imagecheck" id="imagecheck">
+	  			<option value="1" selected="selected">Yes</option>
+					<option value="2">No</option>
+	  		</select>
+	  		Enables products images validation
+	  	</div>
+	  </div>	
+
+	  <div class="form-group">
+		  <label for="verticalsonproducts" class="col-md-3">Add verticals on products</label>
+	  	<div class="content col-md-9">
+	  		<select name="verticalsonproducts" id="verticalsonproducts">
+	  			<option value="1" selected="selected">Yes</option>
+					<option value="2">No</option>
+	  		</select>
+	  		Add verticals for every products
+	  	</div>
+	  </div>	
+
+	  <div class="form-group submit">
+	  	<div class="col-md-3">
+		  	<button type="submit" class="btn btn-primary">Save</button>
+		  	<button type="submit" class="btn btn-default">Cancel</button>
+		  </div>
+	  </div>
+
+	  <div class="checkbox">
+	    <label>
+	      <input type="checkbox"> Invalidate akamai cache ?
+	    </label>
+	    <button type="submit" class="btn btn-default invalidate">Invalidate</button>
+	  </div>
+
+	</form>
+</div>

@@ -1,0 +1,198 @@
+<div style="position: absolute; right: 0; z-index: 999;">
+	<div id="filterpanel" class="sf_admin_filter">
+		<h4>Filters</h4>
+	  
+	  <form action="/index.php/feed_manager/filter/action" method="post">
+	    <table cellspacing="0">
+	      <tfoot>
+	        <tr>
+	          <td colspan="2">
+	            <input type="hidden" name="feed_filters[_csrf_token]" value="df3e3125f158a3bc8266096f5052e8b8" id="feed_filters__csrf_token" />            <a onclick="var f = document.createElement('form'); f.style.display = 'none'; this.parentNode.appendChild(f); f.method = 'post'; f.action = this.href;var m = document.createElement('input'); m.setAttribute('type', 'hidden'); m.setAttribute('name', '_csrf_token'); m.setAttribute('value', '8fc150e11d4062974ab0cc8530877276'); f.appendChild(m);f.submit();return false;" href="/index.php/feed_manager/filter/action?_reset">Reset</a>            <input type="submit" value="Filter" />
+	          </td>
+	        </tr>
+	      </tfoot>
+	      <tbody>
+	        <tr class="sf_admin_form_row sf_admin_text sf_admin_filter_field_name">
+		    		<td>
+		    			<label for="feed_filters_name">Name</label>
+		    		</td>
+		    		<td>    
+		      		<input size="20" type="text" name="feed_filters[name]" id="feed_filters_name" />
+		        </td>
+	  			</tr>
+	        <tr class="sf_admin_form_row sf_admin_text sf_admin_filter_field_website">
+				    <td>
+				      <label for="feed_filters_website">Website</label>
+				    </td>
+				    <td>
+	      			<input style="width:200px" type="hidden" name="feed_filters[website]" id="feed_filters_website" /><input style="width:200px" type="text" name="autocomplete_feed_filters[website]" id="autocomplete_feed_filters_website" />
+	      			<script type="text/javascript">
+	              
+							  jQuery(document).ready(function() {
+							    jQuery("#autocomplete_feed_filters_website")
+							    .autocomplete('/index.php/ajax/getWebsites', jQuery.extend({}, {
+							      dataType: 'json',
+							      parse:    function(data) {
+							        var parsed = [];
+							        for (key in data) {
+							          parsed[parsed.length] = { data: [ data[key], key ], value: data[key], result: data[key] };
+							        }
+							        return parsed;
+							      }
+							    }, { }))
+							    .result(function(event, data) { jQuery("#feed_filters_website").val(data[1]); });
+
+							    $('#clear_feed_filters_website').click(
+							      function () {
+							        $("#autocomplete_feed_filters_website").val("");
+							        $("#feed_filters_website").val("");
+							      });
+							   
+							  });
+							</script>
+	          </td>
+	  			</tr>
+	                            
+	        <tr class="sf_admin_form_row sf_admin_foreignkey sf_admin_filter_field_feed_type_token">
+				    <td>
+				      <label for="feed_filters_feed_type_token">Type</label>
+				    </td>
+
+				    <td>				      
+				      <select name="feed_filters[feed_type_token]" id="feed_filters_feed_type_token">
+								<option value="" selected="selected"></option>
+								<option value="XmlInstallment">XmlInstallment</option>
+								<option value="Custom Associations">Custom Associations</option>
+								<option value="Csv">Csv</option>
+								<option value="Custom">Custom</option>
+								<option value="Xml">Xml</option>
+								<option value="XmlNoPrice">XmlNoPrice</option>
+								<option value="CsvNoPrice">CsvNoPrice</option>
+								<option value="XmlPreProcess">XmlPreProcess</option>
+								<option value="XmlRich">XmlRich</option>
+								<option value="CsvPriority">CsvPriority</option>
+								<option value="XmlImageProxy">XmlImageProxy</option>
+								<option value="XmlPriority">XmlPriority</option>
+								<option value="DynamicXml">DynamicXml</option>
+								<option value="CustomImageProxy">CustomImageProxy</option>
+								<option value="DynamicCsv">DynamicCsv</option>
+								<option value="DataCollect">DataCollect</option>
+								<option value="CsvUnitPrice">CsvUnitPrice</option>
+								<option value="XmlStock">XmlStock</option>
+								<option value="CsvStock">CsvStock</option>
+								<option value="XmlInstallmentStock">XmlInstallmentStock</option>
+								<option value="XmlBazaarvoice">XmlBazaarvoice</option>
+								<option value="CsvBazaarvoice">CsvBazaarvoice</option>
+								<option value="XmlStars">XmlStars</option>
+								<option value="CsvStars">CsvStars</option>
+								<option value="XmlIncremental">XmlIncremental</option>
+								<option value="CustomIncremental">CustomIncremental</option>
+								<option value="XmlInstallmentIncremental">XmlInstallmentIncremental</option>
+								<option value="CsvStockNoprice">CsvStockNoprice</option>
+								<option value="XmlStockNoprice">XmlStockNoprice</option>
+							</select>
+	          </td>
+	  			</tr>
+	        <tr class="sf_admin_form_row sf_admin_boolean sf_admin_filter_field_use_cdn">
+	    			<td>
+				      <label for="feed_filters_use_cdn">Pictures on CDN</label>
+				    </td>
+				    <td>
+	            <select name="feed_filters[use_cdn]" id="feed_filters_use_cdn">
+								<option value="" selected="selected">yes or no</option>
+								<option value="1">yes</option>
+								<option value="0">no</option>
+							</select>
+	          </td>
+	  			</tr>
+	        <tr class="sf_admin_form_row sf_admin_foreignkey sf_admin_filter_field_cdn_type">
+				    <td>
+				      <label for="feed_filters_cdn_type">Type of CDN</label>
+				    </td>
+				    <td>	      
+				      <select name="feed_filters[cdn_type]" id="feed_filters_cdn_type">
+								<option value="" selected="selected"></option>
+								<option value="1">OVH</option>
+								<option value="2">Akamaï</option>
+							</select>
+	          </td>
+	  			</tr>
+	        <tr class="sf_admin_form_row sf_admin_boolean sf_admin_filter_field_refresh_cdn">
+	    			<td>
+	      			<label for="feed_filters_refresh_cdn">Refresh CDN</label>
+	      		</td>
+	    			<td>
+	      	    <select name="feed_filters[refresh_cdn]" id="feed_filters_refresh_cdn">
+								<option value="" selected="selected">yes or no</option>
+								<option value="1">yes</option>
+								<option value="0">no</option>
+							</select>
+	          </td>
+	  			</tr>
+	        <tr class="sf_admin_form_row sf_admin_boolean sf_admin_filter_field_manual_loading">
+				    <td>
+				      <label for="feed_filters_manual_loading">Manuel loading</label>
+				    </td>
+				    <td>
+	    	      <select name="feed_filters[manual_loading]" id="feed_filters_manual_loading">
+								<option value="" selected="selected">yes or no</option>
+								<option value="1">yes</option>
+								<option value="0">no</option>
+							</select>
+	          </td>
+	 				</tr>
+				  <tr class="sf_admin_form_row sf_admin_boolean sf_admin_filter_field_is_active">
+				    <td>
+				      <label for="feed_filters_is_active">Active</label>
+				    </td>
+				    <td>
+				      <select name="feed_filters[is_active]" id="feed_filters_is_active">
+								<option value="" selected="selected">yes or no</option>
+								<option value="1">yes</option>
+								<option value="0">no</option>
+							</select>
+				    </td>
+				  </tr>
+				  <tr class="sf_admin_form_row sf_admin_boolean sf_admin_filter_field_is_random">
+				    <td>
+				      <label for="feed_filters_is_random">Random</label>
+				    </td>
+				    <td>
+				      <select name="feed_filters[is_random]" id="feed_filters_is_random">
+								<option value="" selected="selected">yes or no</option>
+								<option value="1">yes</option>
+								<option value="0">no</option>
+							</select>
+				    </td>
+				  </tr>
+				  <tr class="sf_admin_form_row sf_admin_text sf_admin_filter_field_warning">
+				    <td>
+				      <label for="feed_filters_warning">Warning</label>
+				    </td>
+				    <td>
+				      <select name="feed_filters[warning]" id="feed_filters_warning">
+								<option value="0"></option>
+								<option value="1">Yes</option>
+								<option value="2">No</option>
+							</select>
+				    </td>
+				  </tr>
+				  <tr class="sf_admin_form_row sf_admin_foreignkey sf_admin_filter_field_server_id">
+				    <td>
+				      <label for="feed_filters_server_id">Server ETL</label>
+				    </td>
+				    <td>	      
+				      <select name="feed_filters[server_id]" id="feed_filters_server_id">
+								<option value="" selected="selected"></option>
+								<option value="12">product-etl01.geu</option>
+								<option value="13">product-etl02.geu</option>
+								<option value="14">product-etl03.geu.nextperf.local</option>
+								<option value="15">product-etl-test01.geu.nextperf.local</option>
+							</select>
+				    </td>
+	  			</tr>
+				</tbody>
+	    </table>
+	  </form>
+	</div>
+</div>

@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+
+a, a:link { 
+	color: inherit; /* no agly blue color for links */
+	text-decoration: none; /* no underline */ 
+}
+
+a:hover {
+	text-decoration: none; /* no underline */ 
+	cursor: pointer;
+}
+
+a:active {
+	text-decoration: none;
+}
+
+a:visited { 
+	color: inherit; /* no agly blue color for links */
+	text-decoration: none; /* no underline */ 
+}
+
+
+body {
+	font-family: 'Quicksand', sans-serif;
+}

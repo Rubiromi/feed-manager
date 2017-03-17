@@ -1,0 +1,17 @@
+.btn-group-sm>.btn, .btn-sm {
+	margin-top: 7px;
+	text-align: right;
+}
+
+.container {
+    margin: 50px auto;
+}
+
+.dropdown {
+	text-align: right;
+	margin: 0 30px;
+}
+
+.filter {
+	text-align: right;
+}
