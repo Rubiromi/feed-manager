@@ -1,3 +1,11 @@
+li.active>a {
+	color: #337ab7;
+}
+
+h3 {
+	color: #337ab7;
+}
+
 .nav-pills>li>a:hover {
 	background-color: white;
 	color: red;
