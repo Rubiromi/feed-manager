@@ -14,7 +14,9 @@ li.active>a {
 
 h3 {
 	color: #337ab7;
+	margin: 13px auto 0 auto;
 }
+
 
 .nav-pills>li>a:hover {
 	background-color: white;
