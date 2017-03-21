@@ -22,10 +22,6 @@ li.active>a {
 	margin: 30px auto 0 auto;
 }
 
-h3 {
-	color: #337ab7;
-}
-
 .nav-pills>li>a:hover {
 	background-color: white;
 	color: red;
