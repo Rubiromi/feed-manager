@@ -17,3 +17,35 @@ div.loading-space {
 	font-size: 120%;
 }
 
+li.active>a {
+	color: #337ab7;
+}
+
+.form {
+	margin-top: 30px;
+}
+
+.footer-border {
+	border-bottom: 1px solid grey;
+	margin: 30px auto 0 auto;
+}
+
+h3 {
+	color: #337ab7;
+}
+
+.nav-pills>li>a:hover {
+	background-color: white;
+	color: red;
+}
+
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus {
+	background-color: white;
+	color: #337ab7;
+	font-size: 120%;
+}
+
+.submit {
+	margin-top: 10px;
+}
+
