@@ -10,15 +10,31 @@ button.btn.btn-default.invalidate {
 }
 
 .container {
+	margin-bottom: 0;
+}
+
+.submit {
 	margin-top: 10px;
 }
 
-div.submit {
+form {
 	margin-top: 30px;
+}
+
+.footer-border {
+	border-bottom: 1px solid grey;
 }
 
 .form-group {
 	margin: 5px auto;
+}
+
+h3 {
+	color: #337ab7;
+}
+
+li.active>a {
+	color: #337ab7;
 }
 
 .nav-pills>li>a:hover {
@@ -31,3 +47,4 @@ div.submit {
 	color: #337ab7;
 	font-size: 120%;
 }
+
