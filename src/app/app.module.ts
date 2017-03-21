@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import { HttpModule, XHRBackend, RequestOptions, Http } from '@angular/http';
 import { Router } from '@angular/router';
 
 import { FeedManagerRoutingModule }     from './app-routing.module';
@@ -20,6 +20,9 @@ import { LoadingResultsComponent } from './loading-results/loading-results.compo
 import { FeedHistoryComponent } from './feed-history/feed-history.component';
 import { ProductsComponent } from './products/products.component';
 import { FeedEditComponent } from './feed-edit/feed-edit.component';
+import { AuthGuard } from './auth.guard';
+import { AuthService } from './services/auth.service';
+import { HttpInterceptor } from './http.interceptor';
 
 @NgModule({
   declarations: [
@@ -44,7 +47,17 @@ import { FeedEditComponent } from './feed-edit/feed-edit.component';
     HttpModule,
     FeedManagerRoutingModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: Http,
+      useFactory: (backend: XHRBackend, options: RequestOptions, router: Router) => {
+        return new HttpInterceptor(backend, options, router);
+      },
+      deps: [XHRBackend, RequestOptions, Router]
+    },
+    AuthGuard,
+    AuthService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

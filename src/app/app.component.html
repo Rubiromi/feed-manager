@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default" *ngIf="isLoggedIn()">
 	<div class="container-fluid">
 		<!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -16,16 +16,16 @@
 
 		<div class="nav navbar-nav navbar-right">
 			<a routerLink="/feeds/:id/new" routerLinkActive="active"><button type="button" class="btn btn-primary navbar-btn">Create New Feed <span class="glyphicon glyphicon-plus-sign"></span></button></a>
-      <div class="btn-group" dropdown>
-        <button type="button" id="split-button" class="btn btn-default navbar-btn"><span class="glyphicon glyphicon-user"></span></button>
-        <button type="button" class="btn btn-default navbar-btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" dropdownToggle>
+      <div class="btn-group">
+        <button type="button" class="btn btn-default navbar-btn"><span class="glyphicon glyphicon-user"></span></button>
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <span class="caret"></span>
           <span class="sr-only">Toggle Dropdown</span>
         </button>
-        <ul class="dropdown-menu" dropdownMenu role="menu" aria-labelledby="split-button">
-          <li><button class="btn btn-link" (click)="logout()">Logout</button></li>
+        <ul class="dropdown-menu">
+          <li><a href="#">Logout</a></li>
         </ul>
-      </div>
+     </div>
     </div>
 	</div>
 </nav>
