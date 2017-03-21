@@ -1,9 +1,19 @@
-.container {
-	margin-top: 10px;
+li.active>a {
+	color: #337ab7;
 }
 
-.form-group {
-	margin: 5px auto;
+.form-horizontal {
+	margin-top: 30px;
+}
+
+.footer-border {
+	border-bottom: 1px solid grey;
+	margin: 30px auto 0 auto;
+
+}
+
+h3 {
+	color: #337ab7;
 }
 
 .nav-pills>li>a:hover {
@@ -15,4 +25,8 @@
 	background-color: white;
 	color: #337ab7;
 	font-size: 120%;
+}
+
+.submit {
+	margin-top: 10px;
 }

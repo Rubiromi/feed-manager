@@ -1,23 +1,24 @@
-<ul class="nav nav-tabs">
-  <li role="presentation"><a href="#">Management</a></li>
-  <li role="presentation"><a href="monitoring">Monitoring</a></li>
-  <li role="presentation"><a href="history">History</a></li>
-  <li role="presentation" class="active"><a href="feeds/:id/new">Edit Feed</a></li>
-</ul>
+<div class="container">	
+	<div class="row">
+		<div class="form-group col-md-2 submit">
+			<button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-chevron-left"></span>Cancel</button>
+		</div>
+		<div class="col-md-4">
+			<h3>Editting feed_name</h3>
+		</div>
+	</div> <!-- row ends -->
 
-<div class="row">
-	<ul class="nav nav-pills col-md-9 col-md-offset-3">
-		<li role="presentation"><a routerLink="/feeds/:id/edit">General</a></li>
+
+	<ul class="nav nav-tabs">
+		<li role="presentation"><a href="feeds/:id/edit">General</a></li>
 	  <li role="presentation" class="active"><a href="loading-parameters">Loading Parameters</a></li>
 	  <li role="presentation"><a href="rewriting-parameters">Rewriting Parameters</a></li>
 	  <li role="presentation"><a href="advanced-parameters">Advanced Parameters</a></li>
 	  <li role="presentation"><a href="loading-results">Loading results</a></li>
 	  <li role="presentation"><a href="products">Products</a></li>
-	  <li role="presentation"><a href="feed-history">Feed History</a></li>
+	  <li role="presentation"><a href="feed-history">History</a></li>
 	</ul>
-</div>
 
-<div class="container">
 	<form class="form-horizontal">
 
 		<div class="form-group">
@@ -161,14 +162,17 @@
 		  </div>
 		</div>
 
-	  <div class="form-group submit">
-	  	<div class="col-md-3 col-md-offset-9">
+	</form>
+
+	<form>
+		<div class="form-group footer-border">
+		  </div>
+		  <div class="form-group col-md-7 submit">
 		  	<button type="submit" class="btn btn-primary">Save</button>
 		  	<button type="submit" class="btn btn-default">Cancel</button>
 		  </div>
-	  </div>
-
 	</form>
+
 </div>
 
 
