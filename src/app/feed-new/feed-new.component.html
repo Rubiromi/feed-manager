@@ -1,11 +1,23 @@
-<ul class="nav nav-tabs">
-  <li role="presentation"><a href="#">Management</a></li>
-  <li role="presentation"><a href="monitoring">Monitoring</a></li>
-  <li role="presentation"><a href="history">History</a></li>
-  <li role="presentation" class="active"><a href="feeds/:id/new">Create New Feed</a></li>
-</ul>
-
 <div class="container">	
+	<div class="row">
+		<div class="form-group col-md-2 submit">
+			<button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-chevron-left"></span>Cancel</button>
+		</div>
+		<div class="col-md-4">
+			<h3>feed_name</h3>
+		</div>
+	</div> <!-- row ends -->
+
+	<ul class="nav nav-tabs">
+		<li role="presentation" class="active"><a href="feeds/:id/new">Create New Feed</a></li>
+	  <li role="presentation" class="inactive"><a>Loading Parameters</a></li>
+	  <li role="presentation" class="inactive"><a>Rewriting Parameters</a></li>
+	  <li role="presentation" class="inactive"><a>Advanced Parameters</a></li>
+	  <li role="presentation" class="inactive"><a>Loading results</a></li>
+	  <li role="presentation" class="inactive"><a>Products</a></li>
+	  <li role="presentation" class="inactive"><a>History</a></li>
+	</ul>
+
 	<form class="form">
 		<div class="row">
 		 	<h2>Create New Feed</h2>
@@ -66,7 +78,7 @@
 		  	</div>
 		  </div>
 		  <div class="form-group col-md-7 submit">
-		  	<button type="submit" class="btn btn-primary">Submit</button>
+		  	<button type="submit" class="btn btn-primary">Save</button>
 		  	<button type="submit" class="btn btn-default">Cancel</button>
 		  </div>
 		</div>  <!-- End of row -->

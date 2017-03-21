@@ -1,3 +1,31 @@
+li.inactive>a {
+	color: #d9d9d9;
+}
+
+li.inactive>a:hover {
+	text-decoration: none; /* no underline */ 
+	cursor: default;
+	background-color: white;
+	border: none;
+}
+
+li.active>a {
+	color: #337ab7;
+}
+
+.form {
+	margin-top: 30px;
+}
+
+.footer-border {
+	border-bottom: 1px solid grey;
+	margin: 30px auto 0 auto;
+}
+
+h3 {
+	color: #337ab7;
+}
+
 .nav-pills>li>a:hover {
 	background-color: white;
 	color: red;
@@ -10,5 +38,5 @@
 }
 
 .submit {
-	margin-top: 30px;
+	margin-top: 10px;
 }
