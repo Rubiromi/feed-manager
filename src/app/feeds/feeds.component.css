@@ -7,6 +7,10 @@
 	text-align: right;
 }
 
+li.active>a {
+	color: #337ab7;
+}
+
 nav {
   text-align: center;
 }
