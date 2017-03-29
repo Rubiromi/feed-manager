@@ -5,7 +5,7 @@ import { LoginModel } from './login.model';
 import { Observable } from 'rxjs/Observable';
 
 @Component({
-  selector: 'app-login',
+  selector: 'login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })

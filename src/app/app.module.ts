@@ -24,6 +24,10 @@ import { AuthGuard } from './auth.guard';
 import { AuthService } from './services/auth.service';
 import { HttpInterceptor } from './http.interceptor';
 
+export function httpFactory(backend: XHRBackend, options: RequestOptions, router: Router) {
+  return new HttpInterceptor(backend, options, router);
+}
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -50,9 +54,7 @@ import { HttpInterceptor } from './http.interceptor';
   providers: [
     {
       provide: Http,
-      useFactory: (backend: XHRBackend, options: RequestOptions, router: Router) => {
-        return new HttpInterceptor(backend, options, router);
-      },
+      useFactory: httpFactory,
       deps: [XHRBackend, RequestOptions, Router]
     },
     AuthGuard,
