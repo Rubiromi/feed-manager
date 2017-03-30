@@ -5,6 +5,8 @@ import { HttpModule } from '@angular/http';
 import { Router } from '@angular/router';
 
 import { FeedManagerRoutingModule }     from './app-routing.module';
+import { ModalModule } from 'angular2-modal';
+import { BootstrapModalModule } from 'angular2-modal/plugins/bootstrap';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -42,7 +44,9 @@ import { FeedEditComponent } from './feed-edit/feed-edit.component';
     BrowserModule,
     FormsModule,
     HttpModule,
-    FeedManagerRoutingModule
+    FeedManagerRoutingModule,
+    ModalModule.forRoot(),
+    BootstrapModalModule
   ],
   providers: [],
   bootstrap: [AppComponent]
